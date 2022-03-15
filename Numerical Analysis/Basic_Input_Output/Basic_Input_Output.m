@@ -1,0 +1,10 @@
+f=@(x)((9.8*68.1)/x)*(1-exp(-(10*x)/68.1))-40;
+x0=input('Enter input');
+x1=input('Enter input');
+fprintf('%.7f\n',x0);
+fprintf('%.7f\n',x1);
+fprintf('%.7f\n',f(x0));
+fprintf('%.7f\n',f(x1));
+c=x0-(f(x0)/(f(x1)-f(x0))*(x1-x0));
+fprintf('%.7f\n',c);
+fprintf('%.7f\n',f(c));
